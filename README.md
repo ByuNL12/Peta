@@ -1,1 +1,403 @@
-peta kampus
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UBSI Pontianak</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* Navbar */
+header{
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+.navbar{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#0056b3;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#0056b3;
+}
+
+/* Hero */
+.hero{
+    width:90%;
+    margin:25px auto;
+    height:530px;
+    border-radius:15px;
+    overflow:hidden;
+    position:relative;
+    background:#d9d9d9;
+    box-shadow:0 30px 50px rgba(0, 0, 0, 0.753);
+}
+
+.hero img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(0, 61, 130, 0.85),
+        rgba(0, 61, 130, 0.6),
+        rgba(0, 61, 130, 0)
+    );
+}
+
+.hero-content h1{
+    position: absolute;
+    top: 40%;
+    left: 40px;
+    font-size:36px;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.hero-content p{
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 2;
+}
+
+.btn{
+    position: absolute;
+    top: 60%;
+    left: 40px;
+    transform: translateY(-50%);
+    background: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Info & Fasilitas */
+.container{
+    width:90%;
+    margin:auto;
+    margin-top:150px;
+}
+
+.info-section{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 3px 15px rgba(0,0,0,0.1);
+}
+
+.card h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#003d82;
+}
+
+.card p{
+    line-height:1.8;
+    text-align:justify;
+}
+
+.fasilitas-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.fasilitas-item{
+    background:#f8f9fb;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    border:1px solid #ddd;
+}
+
+.fasilitas-item i{
+    font-size:30px;
+    margin-bottom:10px;
+    display:block;
+}
+
+/* Gallery */
+.gallery{
+    margin-bottom:50px;
+    margin-top:200px;
+}
+
+.gallery h2{
+    text-align:center;
+    color:#003d82;
+    margin-bottom:25px;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.gallery-item{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 3px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-5px);
+}
+
+.gallery-image{
+    width:100%;
+    height:220px;
+    background:#d9d9d9;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    color:#777;
+    font-weight:bold;
+}
+
+.gallery-image img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+    display:block;
+}
+
+/* Footer */
+footer{
+    background:#003d82;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+@media(max-width:768px){
+
+    .info-section{
+        grid-template-columns:1fr;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero{
+        height:400px;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">UBSI Pontianak</div>
+
+        <ul class="nav-links">
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#kampus">Kampus</a></li>
+            <li><a href="#fasilitas">Fasilitas</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+        </ul>
+    </div>
+</header>
+
+<section class="hero" id="beranda">
+
+    <!-- GANTI DENGAN FOTO KAMPUS -->
+    <img src="img/kampus.jpg" alt="">
+
+    <div class="hero-content">
+        <h1>Selamat Datang di UBSI Pontianak</h1>
+        <p>
+            Kampus Digital Kreatif yang siap membangun generasi
+            <br>
+            cerdas, profesional, dan berkarakter.
+        </p>
+
+        <a href="#" class="btn">Lihat Lebih Lanjut</a>
+    </div>
+
+</section>
+
+<div class="container">
+
+    <section class="info-section" id="kampus">
+
+        <div class="card">
+            <h2>Informasi Kampus</h2>
+
+            <p>
+                Universitas Bina Sarana Informatika Pontianak merupakan
+                perguruan tinggi yang berfokus pada pengembangan
+                teknologi informasi, bisnis digital, dan pendidikan
+                berkualitas untuk menghasilkan lulusan yang kompeten.
+            </p>
+
+        </div>
+
+        <div class="card" id="fasilitas">
+            <h2>Fasilitas Kampus</h2>
+
+            <div class="fasilitas-grid">
+
+                <div class="fasilitas-item">
+                    🏫
+                    <h4>Ruang Kelas</h4>
+                </div>
+
+                <div class="fasilitas-item">
+                    💻
+                    <h4>Laboratorium</h4>
+                </div>
+
+                <div class="fasilitas-item">
+                    📚
+                    <h4>Perpustakaan</h4>
+                </div>
+
+                <div class="fasilitas-item">
+                    🚗
+                    <h4>Area Parkir</h4>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALERI TERPISAH -->
+    <section class="gallery" id="galeri">
+
+        <h2>Galeri Kampus</h2>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/Aula.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/Fasilitas Kesehatan.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/Perpustakaan.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/RuangKelas.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/RuangDosen.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/Lapangan.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/Masjid.jpg" alt="">
+                </div>
+            </div>
+            <div class="gallery-item">
+                <div class="gallery-image">
+                    <img src="img/Areaparkir.jpg" alt="">
+                </div>
+            </div>
+
+        </div>
+
+    </section> 
+
+</div>
+
+<footer>
+    © 2026 Universitas Bina Sarana Informatika Pontianak
+</footer>
+
+</body>
+</html>
