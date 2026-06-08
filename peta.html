@@ -98,7 +98,7 @@ header{
 
 .hero-content h1{
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 40px;
     font-size:36px;
     transform: translateY(-50%);
